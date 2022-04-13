@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Candidly.Toolset", "Candidly.Toolset\Candidly.Toolset.csproj", "{B0D45F9A-0678-468A-B52A-A612EA0B7F88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Repo", "_Repo", "{4976E31B-B991-4871-8CAC-E09F78B21046}"
+	ProjectSection(SolutionItems) = preProject
+		..\.EnlistmentRoot.marker = ..\.EnlistmentRoot.marker
+		..\.gitignore = ..\.gitignore
+		..\Directory.Build.props = ..\Directory.Build.props
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+		..\RepoAndBuild-DirectoryStructure.props = ..\RepoAndBuild-DirectoryStructure.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{73C05009-287F-4437-91A3-9D9CAEC93790}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.SourceRoot.marker = .SourceRoot.marker
+		CodeAnalysis.props = CodeAnalysis.props
+		Directory.Build.props = Directory.Build.props
+		NuGet.config = NuGet.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0D45F9A-0678-468A-B52A-A612EA0B7F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D45F9A-0678-468A-B52A-A612EA0B7F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D45F9A-0678-468A-B52A-A612EA0B7F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D45F9A-0678-468A-B52A-A612EA0B7F88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{73C05009-287F-4437-91A3-9D9CAEC93790} = {4976E31B-B991-4871-8CAC-E09F78B21046}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F450E4D2-4549-41FB-AB3C-2DEA3486612D}
+	EndGlobalSection
+EndGlobal

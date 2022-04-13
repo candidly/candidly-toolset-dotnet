@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+    <Import Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../')))"
+            Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+    <PropertyGroup>
+        <SharedSrcBaseDir>$(SourceRoot)\Shared\Managed-Src</SharedSrcBaseDir>
+        <SharedSrcBaseLabel>Shared-Src</SharedSrcBaseLabel>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <Company>Candidly</Company>
+        <Copyright>(c) Candidly 2010-2022</Copyright>    
+    </PropertyGroup>
+
+    <PropertyGroup>       
+        <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">net462;netcoreapp3.1;net6.0</TargetFrameworks>
+        <TargetFrameworks Condition="'$(OS)' != 'Windows_NT'">netcoreapp3.1;net6.0</TargetFrameworks>
+        
+        <LangVersion>9.0</LangVersion>
+    </PropertyGroup>
+    
+    <ItemGroup Condition=" '$(TargetFramework)' == 'net462' OR '$(TargetFramework)' == 'netcoreapp3.1'">
+    
+        <Compile Include="$(SharedSrcBaseDir)\System.Runtime.CompilerServices\internal\IsExternalInit.cs" 
+                 Link="$(SharedSrcBaseLabel)\System.Runtime.CompilerServices\internal\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
